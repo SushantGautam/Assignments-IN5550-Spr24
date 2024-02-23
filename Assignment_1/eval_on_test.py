@@ -71,6 +71,10 @@ from torch.utils.data import Dataset, DataLoader
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
 class TextClassifier(nn.Module):
     def __init__(self, layer_map=[128], dropout_rate=0.5, merge_operation='XXX', embedding_type='xxx', oov_handler="xxx", freeze_emb=True, RNN_type='xxx', fusion_type='xxx', hidden_dim=None, num_layers=None, bidirectional=None):
         super().__init__()
@@ -151,14 +155,13 @@ class TextClassifier(nn.Module):
         else:
             raise ValueError(f"Unsupported fusion_type: {self.fusion_type}")
 
-        rnn_out = rnn_out.to(device)
-        for layer in self.fc_layers.to(device):
+        rnn_out = rnn_out
+        for layer in self.fc_layers:
             rnn_out = F.relu(layer(rnn_out))
             rnn_out = self.dropout(rnn_out)
 
         output = self.fc_out(rnn_out)
         return output
-
 
 # In[3]:
 
