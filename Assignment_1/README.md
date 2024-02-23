@@ -1,5 +1,5 @@
 # Assignment 1
-Parts 1, 2 and 3 are provided as the Jupyter notebook with training outputs, logs and loss curves, as well as .py files.
+Parts 1, 2 and 3 are provided as the Jupyter notebook with training outputs, logs and loss curves, as well as .py files. \
 The PDF report is also available.
 
 # Evaluation
