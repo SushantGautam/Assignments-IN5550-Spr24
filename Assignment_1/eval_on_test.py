@@ -1,48 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-# import re
-# import os
-# import pandas as pd
-# import matplotlib.pyplot as plt
-
-# from sklearn.datasets import fetch_20newsgroups
-# from sklearn.model_selection import train_test_split, GridSearchCV
-# from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-# from sklearn.pipeline import Pipeline
-# from sklearn.neural_network import MLPClassifier
-# from datasets import load_dataset
-
-# import nltk
-# from nltk.tokenize import word_tokenize
-# from nltk.corpus import stopwords
-# from nltk.stem import WordNetLemmatizer
-
-# from sklearn.metrics import classification_report
-# from sklearn.metrics import precision_recall_fscore_support
-# from sklearn.model_selection import train_test_split
-
-# import gensim
-# from gensim.models import Word2Vec
-# from gensim.models.callbacks import CallbackAny2Vec
-# from gensim import corpora, models, similarities, downloader
-
-# import torch
-# import torch.nn as nn
-# import torch.nn.functional as F
-# from torch.utils.data import Dataset, DataLoader
-# torch.manual_seed(42)
-# from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
-
-# import numpy as np
-# np.random.seed(42)
 
 
 # In[1]:
-
 
 import re
 import pandas as pd
