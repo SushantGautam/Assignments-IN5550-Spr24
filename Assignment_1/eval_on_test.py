@@ -291,8 +291,7 @@ if __name__ == '__main__':
 
 
 ##### Final Model test script:
-# python eval_on_test.py --test /fp/projects01/ec30/IN5550/obligatories/1/arxiv_train.csv.gz --model /fp/projects01/ec30/sushant/torch_demo.bin
-# python eval_on_test.py --test arxiv_train.csv.gz --model torch_demo.bin
+# python eval_on_test.py --test /fp/projects01/ec30/IN5550/obligatories/1/arxiv_train.csv.gz --model /fp/projects01/ec30/sushant/best_model.bin
 
 
 # In[ ]:
