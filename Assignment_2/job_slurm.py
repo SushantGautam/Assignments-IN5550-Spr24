@@ -2,11 +2,9 @@ import time
 import os
 import sys
 from finetuning import *
-
 models_folder = '/cluster/work/projects/ec30/fernavr/'
 
 
-"""
 save_path_folder = "./1a-xlm-roberta-base/"
 os.makedirs(save_path_folder, exist_ok = True)
 with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
@@ -19,7 +17,7 @@ with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
 
 
 
-
+"""
 # ------------------------------------
 save_path_folder = "./1a-xlm-roberta-base/"
 os.makedirs(save_path_folder, exist_ok = True)
@@ -42,7 +40,7 @@ with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
     print("Time Elapsed: ", end - start)
 
 # ------------------------------------
-"""
+
 save_path_folder = "./1a-electra-base-discriminator/"
 os.makedirs(save_path_folder, exist_ok = True)
 with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
@@ -52,14 +50,14 @@ with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
     print("Time Elapsed: ", end - start)
 
 
-"""
+
 # ------------------------------------
 
 save_path_folder = "./1a-deberta-base/"
 os.makedirs(save_path_folder, exist_ok = True)
 with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
     start = time.time()
-    train_test(["en"], ["en"], model_path = "microsoft/deberta-base", save_path = save_path_folder, bs=32)
+    train_test(["en"], ["en"], model_path = models_folder+"deberta-base", save_path = save_path_folder, bs=32)
     end = time.time()
     print("Time Elapsed: ", end - start)
 
@@ -71,7 +69,7 @@ save_path_folder = "./1a-rured2-ner-mdeberta-v3-base/"
 os.makedirs(save_path_folder, exist_ok = True)
 with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
     start = time.time()
-    train_test(["en"], ["en"], model_path = "Grpp/rured2-ner-mdeberta-v3-base", save_path = save_path_folder, bs=32)
+    train_test(["en"], ["en"], model_path = models_folder+"rured2-ner-mdeberta-v3-base", save_path = save_path_folder, bs=32)
     end = time.time()
     print("Time Elapsed: ", end - start)
 
@@ -84,7 +82,7 @@ save_path_folder = "./1a-mdeberta-v3-base/"
 os.makedirs(save_path_folder, exist_ok = True)
 with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
     start = time.time()
-    train_test(["en"], ["en"], model_path = "microsoft/mdeberta-v3-base", save_path = save_path_folder, bs=32)
+    train_test(["en"], ["en"], model_path = models_folder+"mdeberta-v3-base", save_path = save_path_folder, bs=32)
     end = time.time()
     print("Time Elapsed: ", end - start)
 
@@ -96,7 +94,7 @@ save_path_folder = "./1a-deberta-v3-base/"
 os.makedirs(save_path_folder, exist_ok = True)
 with open(save_path_folder+'output_train.txt', 'w') as sys.stdout:
     start = time.time()
-    train_test(["en"], ["en"], model_path = "microsoft/deberta-v3-base", save_path = save_path_folder, bs=32)
+    train_test(["en"], ["en"], model_path = models_folder+"deberta-v3-base", save_path = save_path_folder, bs=32)
     end = time.time()
     print("Time Elapsed: ", end - start)
 
