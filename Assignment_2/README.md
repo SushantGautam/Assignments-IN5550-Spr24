@@ -49,6 +49,8 @@ python evaluation.py --model /path/to/model/folder --data /path/to/data/file.tsv
 --data, -d: Path to the .tsv file with one column for data input. Defaults to '/fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv'.
 ```
 
+### Results Reported
+All then plots and training logs are stored in **results** directory.
 
 
 ## By:
