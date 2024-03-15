@@ -7,11 +7,10 @@ nlpl-sentencepiece/0.1.99-foss-2022b-Python-3.10.8
 nlpl-transformers/4.35.2-foss-2022b-Python-3.10.8
 ```
 
-### Usage
+### Training and evaluation
 
-This script allows you to train and test models with specified configurations for multi-language tasks. It supports both fine-tuning and freezing the transformer layers. Additionally, it provides an option to separate validation for each language for Task 2 and saves the plots accordingly.
+train.py allows you to train and test models with specified configurations for multi-language tasks. It supports both fine-tuning and freezing the transformer layers. Additionally, it provides hyperparameter variations as well as an option to separate validation for each language for Task 2 and saves the plots accordingly.
 
-## Usage
 
 ```python
 python train.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --model_name model_path --batch_size batch_size --epoch epoch --learning_rate learning_rate --finetune --separate_val
@@ -26,10 +25,10 @@ python train.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --
 --separate_val: Flag to use separated validation for each language for Task 2. Also saves the plots. (recommended)
 ```
 
-# Evaluation
+### Surprise Language
 TODO
 
 ## By:
-**Sushant Gautam** and **Fernando Vallecillos Ruiz**
+**Fernando Vallecillos Ruiz** and **Sushant Gautam**
 
 [Overleaf](https://www.overleaf.com/read/dcspmfcnztbp#3a9cdd)
