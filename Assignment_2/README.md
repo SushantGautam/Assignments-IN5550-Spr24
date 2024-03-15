@@ -38,12 +38,9 @@ To reproduce, run the evaluation.py script:
 
 ```python
 python evaluation.py --model /cluster/work/projects/ec30/fernavr/best_model --data /fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv
-```
 
 Documentation:
-```python
 python evaluation.py --model /path/to/model/folder --data /path/to/data/file.tsv
-
 
 --model, -m: Path to the folder containing the pre-trained model. Defaults to '/cluster/work/projects/ec30/fernavr/best_model'.
 --data, -d: Path to the .tsv file with one column for data input. Defaults to '/fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv'.
