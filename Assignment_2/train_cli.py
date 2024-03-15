@@ -24,7 +24,7 @@ def main():
 
     # Call the appropriate function based on the separate_val flag
     if args.separate_val:
-        train_test_sep_val(args.source_langs, args.target_langs, model_path=args.model_name, bs=args.batch_size, save_path=save_path_folder)
+        train_test_sep_val(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder,  bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune)
     else:
         train_test(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder, bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune)
 
