@@ -9,11 +9,11 @@ nlpl-transformers/4.35.2-foss-2022b-Python-3.10.8
 
 ### Training and evaluation
 
-train.py allows you to train and test models with specified configurations for multi-language tasks. It supports both fine-tuning and freezing the transformer layers. Additionally, it provides hyperparameter variations as well as an option to separate validation for each language for Task 2 and saves the plots accordingly.
+train_cli.py allows you to train and test models with specified configurations for multi-language tasks. It supports both fine-tuning and freezing the transformer layers. Additionally, it provides hyperparameter variations as well as an option to separate validation for each language for Task 2 and saves the plots accordingly.
 
 
 ```python
-python train.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --model_name model_path --batch_size batch_size --epoch epoch --learning_rate learning_rate --finetune --separate_val
+python train_cli.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --model_name model_path --batch_size batch_size --epoch epoch --learning_rate learning_rate --finetune --separate_val
 
 --source_langs: List of source languages for training (required).
 --target_langs: List of target languages for training and evaluation (required).
