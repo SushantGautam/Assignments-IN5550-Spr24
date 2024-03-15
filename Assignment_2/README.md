@@ -23,21 +23,29 @@ python train_cli.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ..
 --learning_rate: Learning rate for training (default: 1e-5).
 --finetune: Flag to finetune the model. If not set, the transformer layers will be frozen.
 --separate_val: Flag to use separated validation for each language for Task 2. Also saves the plots. (recommended)
+
+Example:
+python train_cli.py --source_langs en de --target_langs fr sw  --model_name /fp/projects01/ec30/models/xlm-roberta-base/ --batch_size 64 --epoch 20 --learning_rate 1e-5 --finetune --separate_val
+
 ```
 
 ### Surprise Language
+
 Run the evaluation.py script:
 
 ```python
-python evaluation.py --model /path/to/model/folder --data /path/to/data/file.tsv
+python evaluation.py --model /cluster/work/projects/ec30/fernavr/best_model --data /fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv
 ```
+
+Documentation:
+```python
+python evaluation.py --model /path/to/model/folder --data /path/to/data/file.tsv
+
 
 --model, -m: Path to the folder containing the pre-trained model. Defaults to '/cluster/work/projects/ec30/fernavr/best_model'.
 --data, -d: Path to the .tsv file with one column for data input. Defaults to '/fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv'.
+```
 
-Example:
-
-python evaluation.py --model /cluster/work/projects/ec30/fernavr/best_model --data /fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv
 
 
 ## By:
