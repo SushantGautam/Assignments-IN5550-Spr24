@@ -20,7 +20,7 @@ id2label = {0: 'O',1: 'I-ORG', 2: 'I-PER', 3: 'I-LOC', 4: 'B-ORG', 5: 'B-PER', 6
 label2id = {v:i for i,v in id2label.items()}
 def read_gzipped_tsv(filepath):
     df =pd.read_csv(filepath, sep='\t', header=None, names=['Word', 'Type'], keep_default_na=True, na_filter=True,skip_blank_lines=False)
-    return df[:100]
+    return df
 
 # Function to process the DataFrame and group words/types by sentences
 def process_data(df):
