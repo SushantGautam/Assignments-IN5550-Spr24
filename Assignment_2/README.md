@@ -15,8 +15,8 @@ train_cli.py allows you to train and test models with specified configurations f
 ```python
 python train_cli.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --model_name model_path --batch_size batch_size --epoch epoch --learning_rate learning_rate --finetune --separate_val
 
---source_langs: List of source languages for training (required).
---target_langs: List of target languages for training and evaluation (required).
+--source_langs: Source languages for training, separated by space (required; example: en de).
+--target_langs: Target languages for evaluation, separated by space (required; example: en de).
 --model_name: Model name or path (required; example: "/fp/projects01/ec30/models/xlm-roberta-base/").
 --batch_size: Batch size for training (default: 64).
 --epoch: Number of epochs for training (default: 20).
