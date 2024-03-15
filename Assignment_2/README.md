@@ -49,6 +49,8 @@ python evaluation.py --model /path/to/model/folder --data /path/to/data/file.tsv
 ### Results Reported
 All then plots and training logs are stored in **results** directory. Task-1.ipynb is the Notebook used to get some results in Task 1 and **job_slurm.py** for reproducing the plots and results for Task 1/2. 
 
+The PDF report is also available as **Report.pdf**.
+
 
 ## By:
 **Fernando Vallecillos Ruiz** and **Sushant Gautam**
