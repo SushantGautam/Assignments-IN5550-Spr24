@@ -121,7 +121,7 @@ if __name__ == "__main__":
         "-m",
         required=False,
         help="path to a folder with the model.",
-        default='/fp/homes01/u01/ec-fernavr/assign2/Final/best_model',
+        default='/cluster/work/projects/ec30/fernavr/best_model',
     )
 
     parser.add_argument(
