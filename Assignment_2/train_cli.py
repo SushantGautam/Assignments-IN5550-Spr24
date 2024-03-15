@@ -6,8 +6,8 @@ def main():
     parser = argparse.ArgumentParser(description="Train and test models with specified configurations.")
 
     # Adding arguments
-    parser.add_argument('--source_langs', nargs='+', help='Source languages for training', required=True)
-    parser.add_argument('--target_langs', nargs='+', help='Target languages for training and evaluation', required=True)
+    parser.add_argument('--source_langs', nargs='+', help='Source languages for training, separated by space ', required=True)
+    parser.add_argument('--target_langs', nargs='+', help='Target languages for training and evaluation, separated by space ', required=True)
     parser.add_argument('--model_name', help='Model name or path, example: "/fp/projects01/ec30/models/xlm-roberta-base/"', required=True)
     parser.add_argument('--batch_size', type=int, help='Batch size for training', default=64)
     parser.add_argument('--epoch', type=int, help='Number of epochs for training', default=20)
