@@ -9,7 +9,7 @@ def main():
     parser.add_argument('--source_langs', nargs='+', help='Source languages for training', required=True)
     parser.add_argument('--target_langs', nargs='+', help='Target languages for training and evaluation', required=True)
     parser.add_argument('--model_name', help='Model name or path', required=True)
-    parser.add_argument('--batch_size', type=int, help='Batch size for training', default=32)
+    parser.add_argument('--batch_size', type=int, help='Batch size for training', default=64)
     parser.add_argument('--learning_rate', type=float, help='Learning rate for training', default=None)
     parser.add_argument('--finetune', action='store_true', help='Flag to finetune the model. If not set, will freeze the transformer layers.')
     parser.add_argument('--separate_val', action='store_true', help='Flag to use separated validation. If set, uses train_test_sep_val function.')
