@@ -12,7 +12,6 @@ def main():
     parser.add_argument('--batch_size', type=int, help='Batch size for training', default=64)
     parser.add_argument('--learning_rate', type=float, help='Learning rate for training', default=None)
     parser.add_argument('--finetune', action='store_true', help='Flag to finetune the model. If not set, will freeze the transformer layers.')
-    parser.add_argument('--separate_val', action='store_true', help='Flag to use separated validation. If set, uses train_test_sep_val function.')
 
     args = parser.parse_args()
 
@@ -21,11 +20,7 @@ def main():
     save_path_folder = f"./{model_basename.replace('/', '-')}-separated" if args.separate_val else f"./{model_basename.replace('/', '-')}"
     os.makedirs(save_path_folder, exist_ok=True)
 
-    # Call the appropriate function based on the separate_val flag
-    if args.separate_val:
-        train_test_sep_val(args.source_langs, args.target_langs, model_path=args.model_name, bs=args.batch_size, save_path=save_path_folder)
-    else:
-        train_test(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder, bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune)
+    train_test(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder, bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune)
 
     print(f"Training and evaluation completed. Results saved to {save_path_folder}")
 
