@@ -8,7 +8,7 @@ def main():
     # Adding arguments
     parser.add_argument('--source_langs', nargs='+', help='Source languages for training', required=True)
     parser.add_argument('--target_langs', nargs='+', help='Target languages for training and evaluation', required=True)
-    parser.add_argument('--model_name', help='Model name or path', required=True)
+    parser.add_argument('--model_name', help='Model name or path, example: "/fp/projects01/ec30/models/xlm-roberta-base/"', required=True)
     parser.add_argument('--batch_size', type=int, help='Batch size for training', default=64)
     parser.add_argument('--epoch', type=int, help='Number of epochs for training', default=20)
     parser.add_argument('--learning_rate', type=float, help='Learning rate for training', default="1e-5")
