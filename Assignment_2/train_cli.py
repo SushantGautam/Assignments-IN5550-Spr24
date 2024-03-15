@@ -18,8 +18,8 @@ def main():
     args = parser.parse_args()
 
     # Automatically generate save path from model name
-    model_basename = os.path.basename(args.model_name)
-    save_path_folder = f"./{model_basename.replace('/', '-')}-separated" if args.separate_val else f"./{model_basename.replace('/', '-')}"
+    model_basename = os.path.basename(agrs.model_name.rstrip('/'))
+    save_path_folder = f"./{}_{args.source_langs.replace(" ", '')}__{args.target_langs.replace(" ", '')}"
     os.makedirs(save_path_folder, exist_ok=True)
 
     # Call the appropriate function based on the separate_val flag
