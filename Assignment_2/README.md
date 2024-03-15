@@ -6,6 +6,26 @@ nlpl-sentencepiece/0.1.99-foss-2022b-Python-3.10.8
 2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8
 nlpl-transformers/4.35.2-foss-2022b-Python-3.10.8
 ```
+
+### Usage
+
+This script allows you to train and test models with specified configurations for multi-language tasks. It supports both fine-tuning and freezing the transformer layers. Additionally, it provides an option to separate validation for each language for Task 2 and saves the plots accordingly.
+
+## Usage
+
+```bash
+python train.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --model_name model_path --batch_size batch_size --learning_rate learning_rate --finetune --separate_val
+
+--source_langs: List of source languages for training (required).
+--target_langs: List of target languages for training and evaluation (required).
+--model_name: Model name or path (required).
+--batch_size: Batch size for training (default: 64).
+--learning_rate: Learning rate for training (default: None).
+--finetune: Flag to finetune the model. If not set, the transformer layers will be frozen.
+--separate_val: Flag to use separated validation for each language for Task 2. Also saves the plots. (recommended)
+
+
+
 # Evaluation
 TODO
 
