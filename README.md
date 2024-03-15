@@ -1,2 +1,2 @@
 # Assignments-IN5550-Spr24
-Codes for Assignment 1 are in the Assignment_1 folder.
+For each assignment, the corresponding codes are stored in a folder named 'Assignment_X', where 'X' represents the assignment number.

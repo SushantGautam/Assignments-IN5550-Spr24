@@ -1,0 +1,39 @@
+Train Language(s): ['en']
+Train Set: ('Len: 16000', 'Tokens: 128429', 'Unique: 28681', "Entities: {'O': 65017, 'I-ORG': 18842, 'I-PER': 11628, 'I-LOC': 10530, 'B-ORG': 7623, 'B-LOC': 7536, 'B-PER': 7253}")
+Val Set: ('Len: 4000', 'Tokens: 31965', 'Unique: 10319', "Entities: {'O': 16345, 'I-ORG': 4384, 'I-PER': 3070, 'I-LOC': 2647, 'B-PER': 1911, 'B-LOC': 1809, 'B-ORG': 1799}")
+Trainable parameters:  5,383
+Epoch 1/20, train_loss : 1.5967, val_loss: 1.6180, val_f1: 0.0643
+Epoch 2/20, train_loss : 1.4037, val_loss: 1.4741, val_f1: 0.0419
+Epoch 3/20, train_loss : 1.3475, val_loss: 1.3846, val_f1: 0.0429
+Epoch 4/20, train_loss : 1.2791, val_loss: 1.3170, val_f1: 0.0541
+Epoch 5/20, train_loss : 1.3027, val_loss: 1.2613, val_f1: 0.0705
+Epoch 6/20, train_loss : 1.2826, val_loss: 1.2145, val_f1: 0.0986
+Epoch 7/20, train_loss : 1.2949, val_loss: 1.1735, val_f1: 0.1214
+Epoch 8/20, train_loss : 1.1416, val_loss: 1.1378, val_f1: 0.1458
+Epoch 9/20, train_loss : 1.2005, val_loss: 1.1062, val_f1: 0.1692
+Epoch 10/20, train_loss : 1.0947, val_loss: 1.0782, val_f1: 0.1887
+Epoch 11/20, train_loss : 1.0258, val_loss: 1.0532, val_f1: 0.2050
+Epoch 12/20, train_loss : 1.1489, val_loss: 1.0305, val_f1: 0.2234
+Epoch 13/20, train_loss : 1.1928, val_loss: 1.0096, val_f1: 0.2438
+Epoch 14/20, train_loss : 0.9743, val_loss: 0.9909, val_f1: 0.2573
+Epoch 15/20, train_loss : 1.0429, val_loss: 0.9737, val_f1: 0.2687
+Epoch 16/20, train_loss : 0.9565, val_loss: 0.9578, val_f1: 0.2735
+Epoch 17/20, train_loss : 1.0656, val_loss: 0.9433, val_f1: 0.2890
+Epoch 18/20, train_loss : 1.0752, val_loss: 0.9295, val_f1: 0.2959
+Epoch 19/20, train_loss : 1.0989, val_loss: 0.9170, val_f1: 0.3074
+Epoch 20/20, train_loss : 0.9281, val_loss: 0.9055, val_f1: 0.3146
+Test Set(en): ('Len: 10001', 'Tokens: 80535', 'Unique: 20221', "Entities: {'O': 40875, 'I-ORG': 11638, 'I-PER': 7520, 'I-LOC': 6357, 'B-LOC': 4834, 'B-ORG': 4676, 'B-PER': 4635}")
+LANG [en]: F1-score (Token-level) : 0.322
+Test Loss: 0.9040036671839583 
+ Test Evaluation (strict IOB2):
+              precision    recall  f1-score   support
+
+         LOC      0.442     0.327     0.376      9463
+         ORG      0.301     0.152     0.202      7848
+         PER      0.644     0.471     0.544      7491
+
+   micro avg      0.475     0.315     0.379     24802
+   macro avg      0.462     0.317     0.374     24802
+weighted avg      0.459     0.315     0.372     24802
+
+Time Elapsed:  2180.307726621628

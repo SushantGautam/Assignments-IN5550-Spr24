@@ -1,0 +1,24 @@
+Train Language(s): ['en']
+Train Set: ('Len: 16000', 'Tokens: 128429', 'Unique: 28681', "Entities: {'O': 65017, 'I-ORG': 18842, 'I-PER': 11628, 'I-LOC': 10530, 'B-ORG': 7623, 'B-LOC': 7536, 'B-PER': 7253}")
+Val Set: ('Len: 4000', 'Tokens: 31965', 'Unique: 10319', "Entities: {'O': 16345, 'I-ORG': 4384, 'I-PER': 3070, 'I-LOC': 2647, 'B-PER': 1911, 'B-LOC': 1809, 'B-ORG': 1799}")
+Trainable parameters:  278,224,135
+Epoch 1/20, train_loss : 1.6298, val_loss: 1.6239, val_f1: 0.0000
+Epoch 2/20, train_loss : 1.5958, val_loss: 1.7237, val_f1: 0.0000
+Epoch 3/20, train_loss : 1.6105, val_loss: 1.6314, val_f1: 0.0000
+Epoch 4/20, train_loss : 1.5208, val_loss: 1.6739, val_f1: 0.0000
+Early stopping at epoch 4 as validation loss has not decreased for 3 epochs since epoch-0.
+Test Set(en): ('Len: 10001', 'Tokens: 80535', 'Unique: 20221', "Entities: {'O': 40875, 'I-ORG': 11638, 'I-PER': 7520, 'I-LOC': 6357, 'B-LOC': 4834, 'B-ORG': 4676, 'B-PER': 4635}")
+LANG [en]: F1-score (Token-level) : 0.000
+Test Loss: 1.6759373532316555 
+ Test Evaluation (strict IOB2):
+              precision    recall  f1-score   support
+
+         LOC      0.000     0.000     0.000      9463
+         ORG      0.000     0.000     0.000      7848
+         PER      0.000     0.000     0.000      7491
+
+   micro avg      0.000     0.000     0.000     24802
+   macro avg      0.000     0.000     0.000     24802
+weighted avg      0.000     0.000     0.000     24802
+
+Time Elapsed:  1014.4552836418152

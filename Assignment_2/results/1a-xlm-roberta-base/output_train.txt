@@ -1,0 +1,29 @@
+Train Language(s): ['en']
+Train Set: ('Len: 16000', 'Tokens: 128429', 'Unique: 28681', "Entities: {'O': 65017, 'I-ORG': 18842, 'I-PER': 11628, 'I-LOC': 10530, 'B-ORG': 7623, 'B-LOC': 7536, 'B-PER': 7253}")
+Val Set: ('Len: 4000', 'Tokens: 31965', 'Unique: 10319', "Entities: {'O': 16345, 'I-ORG': 4384, 'I-PER': 3070, 'I-LOC': 2647, 'B-PER': 1911, 'B-LOC': 1809, 'B-ORG': 1799}")
+Trainable parameters:  277,458,439
+Epoch 1/20, train_loss : 0.4750, val_loss: 0.3924, val_f1: 0.7348
+Epoch 2/20, train_loss : 0.3750, val_loss: 0.3253, val_f1: 0.7887
+Epoch 3/20, train_loss : 0.3820, val_loss: 0.3041, val_f1: 0.7976
+Epoch 4/20, train_loss : 0.3173, val_loss: 0.2992, val_f1: 0.8039
+Epoch 5/20, train_loss : 0.2554, val_loss: 0.3007, val_f1: 0.8120
+Epoch 6/20, train_loss : 0.2006, val_loss: 0.2880, val_f1: 0.8159
+Epoch 7/20, train_loss : 0.2990, val_loss: 0.3048, val_f1: 0.8142
+Epoch 8/20, train_loss : 0.1988, val_loss: 0.2993, val_f1: 0.8167
+Epoch 9/20, train_loss : 0.1154, val_loss: 0.3034, val_f1: 0.8185
+Early stopping at epoch 9 as validation loss has not decreased for 3 epochs since epoch-5.
+Test Set(en): ('Len: 10001', 'Tokens: 80535', 'Unique: 20221', "Entities: {'O': 40875, 'I-ORG': 11638, 'I-PER': 7520, 'I-LOC': 6357, 'B-LOC': 4834, 'B-ORG': 4676, 'B-PER': 4635}")
+LANG [en]: F1-score (Token-level) : 0.822
+Test Loss: 0.2931183951960248 
+ Test Evaluation (strict IOB2):
+              precision    recall  f1-score   support
+
+         LOC      0.844     0.885     0.864      9675
+         ORG      0.768     0.729     0.748      7933
+         PER      0.880     0.873     0.877      7021
+
+   micro avg      0.831     0.831     0.831     24629
+   macro avg      0.831     0.829     0.829     24629
+weighted avg      0.830     0.831     0.830     24629
+
+Time Elapsed:  1513.4977533817291

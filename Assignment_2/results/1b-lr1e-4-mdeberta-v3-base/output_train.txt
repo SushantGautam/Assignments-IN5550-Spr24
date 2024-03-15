@@ -1,0 +1,26 @@
+Warning: 2 rows excluded due to sparse bins.
+Train Language(s): ['en']
+Train Set: ('Len: 15998', 'Tokens: 127763', 'Unique: 28448', "Entities: {'O': 64775, 'I-ORG': 18842, 'I-PER': 11628, 'I-LOC': 10334, 'B-ORG': 7623, 'B-LOC': 7308, 'B-PER': 7253}")
+Val Set: ('Len: 4000', 'Tokens: 31965', 'Unique: 10319', "Entities: {'O': 16345, 'I-ORG': 4384, 'I-PER': 3070, 'I-LOC': 2647, 'B-PER': 1911, 'B-LOC': 1809, 'B-ORG': 1799}")
+Trainable parameters:  278,224,135
+Epoch 1/20, train_loss : 0.4055, val_loss: 0.3122, val_f1: 0.7654
+Epoch 2/20, train_loss : 0.1651, val_loss: 0.2871, val_f1: 0.8076
+Epoch 3/20, train_loss : 0.1208, val_loss: 0.2985, val_f1: 0.8183
+Epoch 4/20, train_loss : 0.0659, val_loss: 0.3030, val_f1: 0.8153
+Epoch 5/20, train_loss : 0.1642, val_loss: 0.3078, val_f1: 0.8326
+Early stopping at epoch 5 as validation loss has not decreased for 3 epochs since epoch-1.
+Test Set(en): ('Len: 10001', 'Tokens: 80535', 'Unique: 20221', "Entities: {'O': 40875, 'I-ORG': 11638, 'I-PER': 7520, 'I-LOC': 6357, 'B-LOC': 4834, 'B-ORG': 4676, 'B-PER': 4635}")
+LANG [en]: F1-score (Token-level) : 0.830
+Test Loss: 0.30703866078307074 
+ Test Evaluation (strict IOB2):
+              precision    recall  f1-score   support
+
+         LOC      0.843     0.884     0.863      9463
+         ORG      0.790     0.726     0.757      7848
+         PER      0.899     0.875     0.887      7491
+
+   micro avg      0.844     0.831     0.838     24802
+   macro avg      0.844     0.828     0.835     24802
+weighted avg      0.843     0.831     0.837     24802
+
+Time Elapsed:  1261.54652261734
