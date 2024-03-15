@@ -25,9 +25,9 @@ def main():
 
     #all the appropriate function based on the separate_val flag
     if args.separate_val:
-        train_test_sep_val(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder,  bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune)
+        train_test_sep_val(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder,  bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune, epochs=args.epoch)
     else:
-        train_test(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder, bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune)
+        train_test(args.source_langs, args.target_langs, model_path=args.model_name, save_path=save_path_folder, bs=args.batch_size, lr=args.learning_rate, finetune=args.finetune, epochs=args.epoch)
 
     print(f"Training and evaluation completed. Results saved to {save_path_folder}")
 
