@@ -31,7 +31,10 @@ python train_cli.py --source_langs en de --target_langs fr sw  --model_name /fp/
 
 ### Surprise Language
 
-Run the evaluation.py script:
+The output TSV is saved as **pred_tags_mapped.tsv**.
+The best model is saved at '/cluster/work/projects/ec30/fernavr/best_model'
+
+To reproduce, run the evaluation.py script:
 
 ```python
 python evaluation.py --model /cluster/work/projects/ec30/fernavr/best_model --data /fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv
