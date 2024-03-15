@@ -17,7 +17,7 @@ python train_cli.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ..
 
 --source_langs: List of source languages for training (required).
 --target_langs: List of target languages for training and evaluation (required).
---model_name: Model name or path (required).
+--model_name: Model name or path (required; example: "/fp/projects01/ec30/models/xlm-roberta-base/").
 --batch_size: Batch size for training (default: 64).
 --epoch: Number of epochs for training (default: 20).
 --learning_rate: Learning rate for training (default: 1e-5).
@@ -26,7 +26,19 @@ python train_cli.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ..
 ```
 
 ### Surprise Language
-TODO
+Run the evaluation.py script:
+
+```python
+python evaluation.py --model /path/to/model/folder --data /path/to/data/file.tsv
+```
+
+--model, -m: Path to the folder containing the pre-trained model. Defaults to '/cluster/work/projects/ec30/fernavr/best_model'.
+--data, -d: Path to the .tsv file with one column for data input. Defaults to '/fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv'.
+
+Example:
+
+python evaluation.py --model /cluster/work/projects/ec30/fernavr/best_model --data /fp/projects01/ec30/IN5550/obligatories/2/surprise/surprise_test_set.tsv
+
 
 ## By:
 **Fernando Vallecillos Ruiz** and **Sushant Gautam**
