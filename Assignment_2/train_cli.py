@@ -20,7 +20,7 @@ def main():
 
     # Automatically generate save path from model name
     model_basename = os.path.basename(args.model_name.rstrip('/'))
-    save_path_folder = f"./{model_basename}_{''.join(args.source_langs)}__{''.join(args.target_langs)}"
+    save_path_folder = f"./{model_basename}_{''.join(args.source_langs)}__{''.join(args.target_langs)}/"
     os.makedirs(save_path_folder, exist_ok=True)
 
     #all the appropriate function based on the separate_val flag
