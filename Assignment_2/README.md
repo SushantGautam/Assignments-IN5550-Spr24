@@ -13,18 +13,18 @@ This script allows you to train and test models with specified configurations fo
 
 ## Usage
 
-```bash
-python train.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --model_name model_path --batch_size batch_size --learning_rate learning_rate --finetune --separate_val
+```python
+python train.py --source_langs lang1 lang2 ... --target_langs lang1 lang2 ... --model_name model_path --batch_size batch_size --epoch epoch --learning_rate learning_rate --finetune --separate_val
 
 --source_langs: List of source languages for training (required).
 --target_langs: List of target languages for training and evaluation (required).
 --model_name: Model name or path (required).
 --batch_size: Batch size for training (default: 64).
---learning_rate: Learning rate for training (default: None).
+--epoch: Number of epochs for training (default: 20).
+--learning_rate: Learning rate for training (default: 1e-5).
 --finetune: Flag to finetune the model. If not set, the transformer layers will be frozen.
 --separate_val: Flag to use separated validation for each language for Task 2. Also saves the plots. (recommended)
-
-
+```
 
 # Evaluation
 TODO
