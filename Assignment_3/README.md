@@ -3,6 +3,7 @@
 ```
 nlpl-llmtools/03-foss-2022b-Python-3.10.8
 nlpl-transformers/4.38.2-foss-2022b-Python-3.10
+nlpl-sentencepiece/0.1.99-foss-2022b-Python-3.10.8
 ```
 
 ## Training and evaluation
