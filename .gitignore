@@ -1,4 +1,4 @@
 .lock
 .jupyter**
 .ipy**
-
+__pycache__/
