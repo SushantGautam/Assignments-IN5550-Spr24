@@ -25,7 +25,7 @@ Task3.2+3.py [-h] --checkpoint {facebook/opt-6.7b,mistralai/Mistral-7B-v0.1} [--
 ```
 
 ### Task 4.1 and 4.2
-To generate results in 3.2 and 3.3 using **facebook/opt-6.7b** or **mistralai/Mistral-7B-v0.1** with zero and few shot prompting.
+To generate results in 4.1 and 4.2 using google-bert/bert-large-cased or FacebookAI/roberta-large with zero and few shot prompting.
 
 ```
 Task4.1+2.py [-h] --checkpoint {google-bert/bert-large-cased,FacebookAI/roberta-large} --correctness_metric {overall,coherence,accuracy,coverage}
@@ -35,6 +35,17 @@ Task4.1+2.py [-h] --checkpoint {google-bert/bert-large-cased,FacebookAI/roberta-
 --checkpoint: Specifies HF checkpoint to use for the model for task 4.2. One of google-bert/bert-large-cased or FacebookAI/roberta-large.
 **example:**
 python Task4.1+2.py --checkpoint FacebookAI/roberta-large  --correctness_metric accuracy coherence
+```
+
+### Task 4.3
+To generate results in 4.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
+
+```
+Task4.3.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v0.2} --correctness_metric {overall,coherence,accuracy,coverage}
+
+**arguments:**
+--checkpoint: Specifies HF checkpoint to use for the model for task 4.2. One of "google/flan-t5-xxl", "mistralai/Mistral-7B-Instruct-v0.2"
+python Task4.3.py --checkpoint google/flan-t5-xxl
 ```
 
 ## By:
