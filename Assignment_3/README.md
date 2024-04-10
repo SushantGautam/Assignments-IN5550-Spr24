@@ -23,7 +23,7 @@ Task3.2+3.py [-h] --checkpoint {facebook/opt-6.7b,mistralai/Mistral-7B-v0.1, mis
 --checkpoint: Specifies HF checkpoint to use for the model. One of facebook/opt-6.7b or mistralai/Mistral-7B-v0.1.
 --multi_shot: Enables the use of multiple prompts for each article foir task 3.2.2. This option does not require a value. Dont include for zero shot prompting for 3.2.1. Doesn't apply when using mistralai/Mistral-7B-Instruct-v0.2 and google/flan-t5-xxl which only is implemneted for zero-shot for 3.3.
 ```
-Intermediate generation results from 3.2 and 3.3 are saved in data_tmp folder.
+ The script creates a folder with a JSON for each data row. Also, those generation results from 3.2 and 3.3 are compiled to CSVs in data_tmp folder for comprehension.
 
 ### Task 4.1 and 4.2
 To generate results in 4.1 and 4.2 using google-bert/bert-large-cased or FacebookAI/roberta-large.
