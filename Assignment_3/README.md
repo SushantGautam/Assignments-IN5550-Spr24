@@ -39,7 +39,7 @@ python Task4.1+2.py --checkpoint FacebookAI/roberta-large  --correctness_metric 
 ```
 Four of the trained models reported in report are uploaded in HuggingFace model repository with ID: SushantGautam/roberta-large_accuracy-coverage, SushantGautam/roberta-large_overall-coherence, SushantGautam/bert-large-cased_accuracy-coverage, SushantGautam/bert-large-cased_overall-coherence
 
- The training logs are published in Weight and Bias at https://wandb.ai/sushantgautam/nlp_assignment
+ The training logs are published in Weights and Biases at https://wandb.ai/sushantgautam/nlp_assignment
 
 ### Task 4.3a Generate 5 candidate summaries for test set 
 To generate results in 4.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
