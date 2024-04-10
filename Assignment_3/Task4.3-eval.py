@@ -72,7 +72,7 @@ for checkpoint in checkpoints:
         
     df_eval = datasetx.from_pandas(dfx).map(preprocess_function, batched=True)
     predictions, _, _ = Predictor(model=model).predict(test_dataset=df_eval)
-    dfx[checkpoint.split('/')[-3]] = predictions
+    dfx[checkpoint] = predictions
 dfx.to_csv(candidate_scored_csv, index=False)
 
 

@@ -26,6 +26,8 @@ tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 
 df = pd.read_csv("data/train_test_split_1k.csv")
 folder_name = "data_tmp/5.2generations"
+os.makedirs(folder_name, exist_ok=True)
+
 
 prompt_ins= "Provide a concise summary of the text provided, highlighting the most important information and conclusions in maximum 100 words:"
 
