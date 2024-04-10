@@ -67,9 +67,6 @@ python Task4.3.py  --generation_csv data_tmp/4.3generations.csv --models Sushant
 The script prints the metrics but also logs the intermediate scores for each candidate at "data_tmp/4.3candiates_scored.csv". 
 
 
-### Task 5a
-Task5.2+3.py
-
 ### Task 5.2 and 5.3
 To generate results in 5.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
 
