@@ -36,8 +36,11 @@ Task4.1+2.py [-h] --checkpoint {google-bert/bert-large-cased,FacebookAI/roberta-
 **example:**
 python Task4.1+2.py --checkpoint FacebookAI/roberta-large  --correctness_metric accuracy coherence
 ```
+Four of the trained models reported in report are uploaded in HuggingFace model repository with ID: SushantGautam/roberta-large_accuracy-coverage, SushantGautam/roberta-large_overall-coherence, SushantGautam/bert-large-cased_accuracy-coverage, SushantGautam/bert-large-cased_overall-coherence
 
-### Task 4.3
+ The training logs are published in Weight and Bias at https://wandb.ai/sushantgautam/nlp_assignment
+
+### Task 4.3a Generate 5 candidate summaries for test set 
 To generate results in 4.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
 
 ```
@@ -45,9 +48,30 @@ Task4.3.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v
 
 **arguments:**
 --checkpoint: Specifies HF checkpoint to use for the model for task 4.2. One of "google/flan-t5-xxl", "mistralai/Mistral-7B-Instruct-v0.2"
+**example:**
 python Task4.3.py --checkpoint google/flan-t5-xxl
 ```
-The results from the FLAN model reported in report is saved in "data_tmp/4.3generations.csv".
+The generation results from the FLAN model reported in report is saved in "data_tmp/4.3generations.csv".
+
+### Task 4.3b Evaluation with Scorer Model
+To generate results in 4.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
+
+```
+Task4.3-eval.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v0.2} --correctness_metric {overall,coherence,accuracy,coverage}
+
+**arguments:**
+--generation_csv: CSV file with the generations from previous task, hint: saved in data_tmp/4.3generations.csv, 
+--models: HF/local checkpoints of the models to use for scoring, like SushantGautam/roberta-large_accuracy-coverage, Separate with space
+**example:**
+python Task4.3.py  --generation_csv data_tmp/4.3generations.csv --models SushantGautam/roberta-large_accuracy-coverage SushantGautam/roberta-large_overall-coherence SushantGautam/bert-large-cased_accuracy-coverage SushantGautam/bert-large-cased_overall-coherence
+```
+The script prints the metrics but also logs the intermediate scores for each candidate at data_tmp/4.3candiates_scored.csv. 
+
+
+SushantGautam/roberta-large_synt_flan
+SushantGautam/roberta-large_synt_flan_with_reference_summ
+SushantGautam/bert-large-cased_synt_flan
+SushantGautam/bert-large-cased_synt_flan_with_reference_summ
 
 ## By:
 
