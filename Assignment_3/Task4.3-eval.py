@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-#1]:
-
-
-from tqdm.notebook import tqdm #from tqdm import tqdm 
+from tqdm import tqdm 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import pandas as pd
 import itertools
