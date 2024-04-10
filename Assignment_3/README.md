@@ -104,7 +104,7 @@ SushantGautam/roberta-large_synt_flan_with_reference_summ, bert-large-cased_synt
  The training logs are published in Weight and Bias at https://wandb.ai/sushantgautam/nlp_assignment
  
 ### Task 5.7 Evaluation with Scorer Model
-We can use same script as Task4.3-eval.py.
+We can use same script as Task4.3-eval.py. And also use the same generations form Task 4, just with newer scorer model.
 ```
 Task4.3-eval.py [-h] --generation_csv PATH  --models ...
 
@@ -119,8 +119,25 @@ python Task4.3.py --synth --generation_csv data_tmp/4.3generations.csv --models 
 The script prints the metrics but also logs the intermediate scores for each candidate at data_tmp/5.7synthtic_scored.csv. 
 
 
-## By:
 
+### Task 6 Generation on blind set 
+To generate final submission:
+
+```
+Task6.py [-h] --checkpoint MODEL
+
+**arguments:**
+--checkpoint: Specifies HF checkpoint to use for the model, the best score was is SushantGautam/roberta-large_synt_flan
+**example:**
+python Task6.py --checkpoint SushantGautam/roberta-large_synt_flan
+```
+
+The candidate generation from the FLAN model as well as scoring with the best scorer model is saved in "6.FLAN_blind-candidate_scored.csv".
+The summaries for submsission is saved at "final_submission.csv" as well as "final_submission.jsonl.gz" in the required format. 
+
+
+## By:
+**Sushant Gautam** and **Fernando Vallecillos Ruiz**
 
 
 [Overleaf](https://www.overleaf.com/read/shpppdjvstgz#04eec5)
