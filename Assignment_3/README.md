@@ -129,7 +129,7 @@ Task6.py [-h] --checkpoint MODEL
 python Task6.py --checkpoint SushantGautam/roberta-large_synt_flan
 ```
 
-The candidate generation from the FLAN model as well as scoring with the best scorer model is saved in "6.FLAN_blind-candidate_scored.csv".
+The candidate generation from the FLAN model as well as scoring with the best scorer model is saved in "data_tmp/6.FLAN_blind-candidate_scored.csv".
 The summaries for submsission is saved at "final_submission.csv" as well as "final_submission.jsonl.gz" in the required format. 
 
 
