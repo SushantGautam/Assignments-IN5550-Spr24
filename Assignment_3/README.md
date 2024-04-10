@@ -16,7 +16,7 @@ TODO
 ### Task 3.2 and 3.3
 To generate results in 3.2 and 3.3 using **facebook/opt-6.7b** or **mistralai/Mistral-7B-v0.1** with zero and few shot prompting.
 
-```
+```python
 Task3.2+3.py [-h] --checkpoint {facebook/opt-6.7b,mistralai/Mistral-7B-v0.1, mistralai/Mistral-7B-Instruct-v0.2,google/flan-t5-xxl} [--multi_shot]
 
 **arguments:**
@@ -27,7 +27,7 @@ Task3.2+3.py [-h] --checkpoint {facebook/opt-6.7b,mistralai/Mistral-7B-v0.1, mis
 ### Task 4.1 and 4.2
 To generate results in 4.1 and 4.2 using google-bert/bert-large-cased or FacebookAI/roberta-large.
 
-```
+```python
 Task4.1+2.py [-h] --checkpoint {google-bert/bert-large-cased,FacebookAI/roberta-large} --correctness_metric {overall,coherence,accuracy,coverage}
 
 **arguments:**
@@ -43,7 +43,7 @@ Four of the trained models reported in report are uploaded in HuggingFace model 
 ### Task 4.3a Generate 5 candidate summaries for test set 
 To generate results in 4.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
 
-```
+```python
 Task4.3.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v0.2} --correctness_metric {overall,coherence,accuracy,coverage}
 
 **arguments:**
@@ -55,7 +55,7 @@ The generation results from the FLAN model reported in report is saved in "data_
 
 ### Task 4.3b Evaluation with Scorer Model
 
-```
+```python
 Task4.3-eval.py [-h] --generation_csv PATH  --models ...
 
 **arguments:**
@@ -73,7 +73,7 @@ Task5.2+3.py
 ### Task 5.2 and 5.3
 To generate results in 5.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
 
-```
+```python
 Task5.2+3.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v0.2} --correctness_metric {overall,coherence,accuracy,coverage}
 
 **arguments:**
@@ -88,7 +88,7 @@ The generation results from the FLAN model reported in report is saved in "data_
 To generate results in 5.5 and 5.6 using google-bert/bert-large-cased or FacebookAI/roberta-large.
 
 
-```
+```python
 Task5.5+6.py [-h] --checkpoint {google-bert/bert-large-cased,FacebookAI/roberta-large}  --generation_csv PATH  [--keep_reference_summary]
 
 **arguments:**
@@ -105,7 +105,7 @@ SushantGautam/roberta-large_synt_flan_with_reference_summ, bert-large-cased_synt
  
 ### Task 5.7 Evaluation with Scorer Model
 We can use same script as Task4.3-eval.py. And also use the same generations form Task 4, just with newer scorer model.
-```
+```python
 Task4.3-eval.py [-h] --generation_csv PATH  --models ...
 
 **arguments:**
@@ -123,7 +123,7 @@ The script prints the metrics but also logs the intermediate scores for each can
 ### Task 6 Generation on blind set 
 To generate final submission:
 
-```
+```python
 Task6.py [-h] --checkpoint MODEL
 
 **arguments:**
