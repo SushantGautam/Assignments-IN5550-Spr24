@@ -47,6 +47,7 @@ Task4.3.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v
 --checkpoint: Specifies HF checkpoint to use for the model for task 4.2. One of "google/flan-t5-xxl", "mistralai/Mistral-7B-Instruct-v0.2"
 python Task4.3.py --checkpoint google/flan-t5-xxl
 ```
+The results from the FLAN model reported in report is saved in "data_tmp/4.3generations.csv".
 
 ## By:
 
