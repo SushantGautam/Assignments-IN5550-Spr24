@@ -15,7 +15,8 @@ import argparse
 parser = argparse.ArgumentParser(description="Evaluate generated summaries using trained scoring models.")
 parser.add_argument("--generation_csv", type=str, help="CSV file with the generations from previous task, hint: saved in data_tmp/4.3generations.csv")
 parser.add_argument("--models", type=str, nargs='*', help="HF/local checkpoints of the models to use for scoring, like SushantGautam/roberta-large_accuracy-coverage, Separate with space")
-
+parser.add_argument("--synth", action='store_true',
+                    help="Identifier to save the the scores in different file for synthetic data from task 5.7")
 args = parser.parse_args()
 
 
@@ -26,6 +27,12 @@ if args.generation_csv is None:
 if args.models is None:
     raise ValueError(
         "Please provide a valid models path using --models argument. Separate with space if multiple models are provided.")
+
+if args.synth:
+    candidate_scored_csv = "data_tmp/5.7synthtic_scored.csv"
+else:
+    candidate_scored_csv = "data_tmp/4.3candiates_scored.csv"
+     
 
 df = pd.read_csv("data/train_test_split_1k.csv")
 
@@ -66,13 +73,13 @@ for checkpoint in checkpoints:
     df_eval = datasetx.from_pandas(dfx).map(preprocess_function, batched=True)
     predictions, _, _ = Predictor(model=model).predict(test_dataset=df_eval)
     dfx[checkpoint.split('/')[-3]] = predictions
-dfx.to_csv("data_tmp/4.3candiates_scored.csv", index=False)
+dfx.to_csv(candidate_scored_csv, index=False)
 
 
 #7]:
 
 
-dfx = pd.read_csv("data_tmp/4.3candiates_scored.csv")
+dfx = pd.read_csv(candidate_scored_csv)
 dfx.describe()
 
 
