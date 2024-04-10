@@ -14,7 +14,7 @@ TODO
 ```
 
 ### Task 3.2 and 3.3
-To generate results in 3.2 and 3.3 using **facebook/opt-6.7b** or **mistralai/Mistral-7B-v0.1** with zero and few shot prompting.
+To generate results in 3.2 and 3.3 using **facebook/opt-6.7b**,  **mistralai/Mistral-7B-v0.1**, **mistralai/Mistral-7B-Instruct-v0.2** or **google/flan-t5-xxl** with zero and few shot prompting.
 
 ```python
 Task3.2+3.py [-h] --checkpoint {facebook/opt-6.7b,mistralai/Mistral-7B-v0.1, mistralai/Mistral-7B-Instruct-v0.2,google/flan-t5-xxl} [--multi_shot]
