@@ -11,7 +11,7 @@ import itertools
 parser = argparse.ArgumentParser(
     description="Train the model with a specified checkpoint.")
 parser.add_argument("--checkpoint", type=str, choices=[
-                    "facebook/opt-6.7b", "mistralai/Mistral-7B-v0.1"], help="Checkpoint name to use for the model")
+                    "facebook/opt-6.7b", "mistralai/Mistral-7B-v0.1"], help="HF/checkpoint to use for the model")
 parser.add_argument("--multi_shot", action='store_true',
                     help="Whether to use multiple prompts for each article")
 args = parser.parse_args()
