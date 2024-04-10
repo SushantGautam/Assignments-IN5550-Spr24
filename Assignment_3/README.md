@@ -127,7 +127,7 @@ To generate final submission:
 Task6.py [-h] --checkpoint MODEL
 
 **arguments:**
---checkpoint: Specifies HF checkpoint to use for the model, the best score was is SushantGautam/roberta-large_synt_flan
+--checkpoint: Specifies HF/local checkpoint to use for the model, the best score was is SushantGautam/roberta-large_synt_flan
 **example:**
 python Task6.py --checkpoint SushantGautam/roberta-large_synt_flan
 ```
