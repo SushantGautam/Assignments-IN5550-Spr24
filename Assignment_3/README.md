@@ -63,7 +63,7 @@ Task4.3-eval.py [-h] --generation_csv PATH  --models ...
 --generation_csv: CSV file with the generations from previous task, hint: saved in data_tmp/4.3generations.csv, 
 --models: HF/local checkpoints of the models to use for scoring, like SushantGautam/roberta-large_accuracy-coverage, Separate with space
 **example:**
-python Task4.3.py  --generation_csv data_tmp/4.3generations.csv --models SushantGautam/roberta-large_accuracy-coverage SushantGautam/roberta-large_overall-coherence SushantGautam/bert-large-cased_accuracy-coverage SushantGautam/bert-large-cased_overall-coherence
+python 4.3-eval.py --generation_csv data_tmp/4.3generations.csv --models SushantGautam/roberta-large_accuracy-coverage SushantGautam/roberta-large_overall-coherence SushantGautam/bert-large-cased_accuracy-coverage SushantGautam/bert-large-cased_overall-coherence
 ```
 The script prints the metrics but also logs the intermediate scores for each candidate at "data_tmp/4.3candiates_scored.csv". 
 
