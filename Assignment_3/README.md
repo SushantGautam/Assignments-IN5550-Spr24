@@ -72,10 +72,9 @@ The script prints the metrics but also logs the intermediate scores for each can
 To generate results in 5.3 using google/flan-t5-xxl or mistralai/Mistral-7B-Instruct-v0.2 with zero shot prompting.
 
 ```python
-Task5.2+3.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v0.2} --correctness_metric {overall,coherence,accuracy,coverage}
+Task5.2+3.py [-h] --checkpoint {google/flan-t5-xxl,mistralai/Mistral-7B-Instruct-v0.2}
 
 **arguments:**
---generation_csv: CSV file with the generations from previous task, hint: saved in data_tmp/4.3generations.csv, 
 --checkpoint: Specifies HF checkpoint to use for generation. One of "google/flan-t5-xxl", "mistralai/Mistral-7B-Instruct-v0.2"
 **example:**
 python Task5.2+3.py  --checkpoint google/flan-t5-xxl
