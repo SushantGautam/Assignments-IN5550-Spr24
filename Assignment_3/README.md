@@ -9,10 +9,29 @@ module load nlpl-llmtools/03-foss-2022b-Python-3.10.8
 ```
 
 ## Training and evaluation
-### Task 3.2 and 3.3
-To generate results in 3.1:
+### Task 3.1
+To train models in 3.1:
+```python
+Task3.1.py [-h] --checkpoint {google-t5/t5-base, ybelkada/opt-350m-lora}
+
+**arguments:**
+--checkpoint: Specifies HF checkpoint to use for the model. One of google-t5/t5-base, ybelkada/opt-350m-lora.
 ```
-TODO
+
+Two of the trained models reported in report are uploaded in HuggingFace model repository with ID:  SushantGautam/t5-base, SushantGautam/opt-350m-lora
+
+To evaluate the models trained above on test set:
+
+```python
+Task3.1-eval.py [-h] --checkpoint {SushantGautam/t5-base, SushantGautam/opt-350m-lora} 
+
+**arguments:**
+--checkpoint: Specifies HF checkpoint to use for the model. One of SushantGautam/t5-base, SushantGautam/opt-350m-lora
+```
+These models can also be used for text generation with huggingface pipeline directly:
+
+```python
+pipe = pipeline("text2text-generation", model="SushantGautam/t5-base", framework="pt")
 ```
 
 ### Task 3.2 and 3.3
