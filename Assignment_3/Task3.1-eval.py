@@ -67,11 +67,7 @@ for row_id, row in tqdm(df_test.iterrows(), total=df_test.article.count(), desc=
     raw_output = tokenizer.decode(output[0], skip_special_tokens=True)
     actual_output = raw_output
     if not args.checkpoint == "SushantGautam/t5-base": # for OPT model
-        # actual_output = raw_output[len(prompt):]
         actual_output = raw_output.split(separator)[-1]
-    print("article: ", row.article)
-    print("\n\n----> raw_output: ", raw_output)
-    print("\n\n---------> actual_output: ", actual_output)
     actual_output = raw_output[len(prompt):]
 
     prediction.append(actual_output)
