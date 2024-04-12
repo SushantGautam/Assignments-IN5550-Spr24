@@ -3,3 +3,5 @@
 .ipy**
 __pycache__/
 .vscode/
+wandb   
+logs/
