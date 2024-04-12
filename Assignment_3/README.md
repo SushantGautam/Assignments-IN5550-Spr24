@@ -119,7 +119,7 @@ python Task5.5+6.py   --generation_csv data_tmp/5.3synthtic_scored.csv --checkpo
 Four of the trained models reported in report are uploaded in HuggingFace model repository with ID: SushantGautam/roberta-large_synt_flan, 
 SushantGautam/roberta-large_synt_flan_with_reference_summ, bert-large-cased_synt_flan, SushantGautam/bert-large-cased_synt_flan_with_reference_summ
 
- The training logs are published in Weight and Bias at https://wandb.ai/sushantgautam/nlp_assignment
+ The training logs are published in Weights and Biases at https://wandb.ai/sushantgautam/nlp_assignment
  
 ### Task 5.7 Evaluation with Scorer Model
 We can use same script as Task4.3-eval.py. And also use the same generations form Task 4, just with newer scorer model.
