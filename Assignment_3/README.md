@@ -1,9 +1,11 @@
 # Assignment 3
 ## Fox Modules used:
 ```
-nlpl-llmtools/03-foss-2022b-Python-3.10.8
-nlpl-transformers/4.38.2-foss-2022b-Python-3.10
-nlpl-sentencepiece/0.1.99-foss-2022b-Python-3.10.8
+module load nlpl-nlptools/01-foss-2022b-Python-3.10.8
+module load nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8
+module load nlpl-transformers/4.35.2-foss-2022b-Python-3.10.8 
+module load nlpl-sentencepiece/0.1.99-foss-2022b-Python-3.10.8
+module load nlpl-llmtools/03-foss-2022b-Python-3.10.8 
 ```
 
 ## Training and evaluation
