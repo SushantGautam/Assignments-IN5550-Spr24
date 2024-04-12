@@ -67,11 +67,9 @@ for row_id, row in tqdm(df_test.iterrows(), total=df_test.article.count(), desc=
     actual_output = raw_output
     if not args.checkpoint == "SushantGautam/t5-base": # for OPT model
         actual_output = raw_output.split(separator)[-1]
-    actual_output = raw_output[len(prompt):]
-
     prediction.append(actual_output)
     reference.append(row.summary)
-
+    
 results = compute_metrics(predictions=prediction, references=reference)
 print("Scores: ", results)
 
