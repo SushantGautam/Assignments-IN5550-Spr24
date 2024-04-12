@@ -37,7 +37,7 @@ if args.checkpoint == "google-t5/t5-base":
     model_path = "google-t5/t5-base"
     checkpoint = args.checkpoint
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-    o_max_length = 512, 256
+    i_max_length, o_max_length = 512, 256
 else:
     from peft import AutoPeftModelForCausalLM
     from transformers import AutoTokenizer
@@ -45,6 +45,7 @@ else:
     model = AutoPeftModelForCausalLM.from_pretrained("SushantGautam/tmp-opt-350m-lora").to("cuda")
     tokenizer = AutoTokenizer.from_pretrained("facebook/opt-350m")
     model.eval()
+    i_max_length, o_max_length = 350, 350
 
 
 df_test = pd.read_csv("data/train_test_split_1k.csv")
@@ -94,10 +95,14 @@ for row_id, row in tqdm(df_test.iterrows(), total=df_test.article.count(), desc=
         separator = tokenizer.eos_token
     else:
         separator = "\nTL;DR\n"  ######## check logic around this
-    prompt = f"{prefix}{row.article}"
-    output = model.generate(**inputs, max_length=256, num_beams=5, length_penalty=0.6, early_stopping=True) ######## check logic around this
+    if args.checkpoint == "google-t5/t5-base":
+        prompt = f"{prefix}{row.article}"
+    else:
+        prompt = f"{row.article}{separator}"
+    inputs = tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True).to("cuda")
+    output = model.generate(**inputs, max_length=512, num_beams=5, early_stopping=True) ######## check logic around this
     raw_output = tokenizer.decode(output[0], skip_special_tokens=True)
-    actual_output = raw_output[len(row.article) +len(sep_token):]
+    actual_output = raw_output[len(prompt):]
     prediction.append(actual_output)
     reference.append(row.summary)
 
