@@ -24,7 +24,14 @@ tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 
 
 
-df = pd.read_csv("data/train_test_split_1k.csv")
+df_= pd.read_csv("data/train.csv").drop_duplicates().dropna()
+df_['word_count'] = df_['summary'].apply(lambda x: len(x.split()))
+df_ = df_[(df_['word_count'] > 5) & (df_['word_count'] <= 200)] # greater than 5
+df_['article_word_count'] = df_['article'].apply(lambda x: len(x.split()))
+df_ = df_[(df_['article_word_count'] > 40)]  # some articles are too long anyway
+
+df= df_.head(5000)  #TAKE ONLY 5000 samples due to memory constraints
+
 folder_name = "data_tmp/5.2generations"
 os.makedirs(folder_name, exist_ok=True)
 
