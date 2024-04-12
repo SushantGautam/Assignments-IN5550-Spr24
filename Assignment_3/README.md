@@ -28,7 +28,11 @@ Task3.1-eval.py [-h] --checkpoint {SushantGautam/t5-base, SushantGautam/opt-350m
 **arguments:**
 --checkpoint: Specifies HF checkpoint to use for the model. One of SushantGautam/t5-base, SushantGautam/opt-350m-lora
 ```
+These models can also be used for text generation with huggingface pipeline directly:
 
+```python
+pipe = pipeline("text2text-generation", model="SushantGautam/t5-base", framework="pt")
+```
 
 ### Task 3.2 and 3.3
 To generate results in 3.2 and 3.3 using **facebook/opt-6.7b**,  **mistralai/Mistral-7B-v0.1**, **mistralai/Mistral-7B-Instruct-v0.2** or **google/flan-t5-xxl** with zero and few shot prompting.
