@@ -76,6 +76,8 @@ else:
 
 
 
+rouge = evaluate.load("rouge")
+bertscore = evaluate.load("bertscore")
 
 if args.checkpoint == "google-t5/t5-base":
     def preprocess_function(examples):
@@ -86,9 +88,6 @@ if args.checkpoint == "google-t5/t5-base":
         return model_inputs
     df_train = datasetx.from_pandas(train_df).map(preprocess_function, batched=True)
     df_val = datasetx.from_pandas(val_df).map(preprocess_function, batched=True)
-
-    rouge = evaluate.load("rouge")
-    bertscore = evaluate.load("bertscore")
 
     def compute_metrics(eval_pred):
         predictions, labels = eval_pred
@@ -144,11 +143,6 @@ else:
 
     df_train = datasetx.from_pandas(train_df).map(preprocess_function, batched=True)
     df_val = datasetx.from_pandas(val_df).map(preprocess_function, batched=True)
-
-    rouge = evaluate.load("rouge")
-    bertscore = evaluate.load("bertscore")
-    # from bert_score import BERTScorer
-    # scorer_bert = BERTScorer(lang="en", rescale_with_baseline=True)
 
     def compute_metrics(eval_pred):
         predictions, labels = eval_pred
