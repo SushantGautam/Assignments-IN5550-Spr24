@@ -48,8 +48,7 @@ else:
     i_max_length, o_max_length = 350, 350
 
 
-df_test = pd.read_csv("data/train_test_split_1k.csv").
-
+df_test = pd.read_csv("data/train_test_split_1k.csv")
 
 prediction, reference = [], []
 
