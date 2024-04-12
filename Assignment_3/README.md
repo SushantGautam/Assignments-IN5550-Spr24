@@ -17,7 +17,7 @@ Task3.1.py [-h] --checkpoint {google-t5/t5-base, ybelkada/opt-350m-lora}
 **arguments:**
 --checkpoint: Specifies HF checkpoint to use for the model. One of google-t5/t5-base, ybelkada/opt-350m-lora.
 ```
-
+The training logs are published in Weights and Biases at https://wandb.ai/sushantgautam/nlp_assignment.
 Two of the trained models reported in report are uploaded in HuggingFace model repository with ID:  SushantGautam/t5-base, SushantGautam/opt-350m-lora
 
 To evaluate the models trained above on test set:
