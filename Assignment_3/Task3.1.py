@@ -35,7 +35,7 @@ if args.checkpoint is None:
         "Please provide a valid checkpoint name using --checkpoint argument.")
 
 
-df_= pd.read_csv("train.csv").drop_duplicates().dropna()
+df_= pd.read_csv("data/train.csv").drop_duplicates().dropna()
 df_['word_count'] = df_['summary'].apply(lambda x: len(x.split()))
 df_ = df_[(df_['word_count'] > 5) & (df_['word_count'] <= 200)] # greater than 5
 df_['article_word_count'] = df_['article'].apply(lambda x: len(x.split()))

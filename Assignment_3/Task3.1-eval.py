@@ -13,7 +13,7 @@ import os
 from transformers import AutoTokenizer
 from transformers import DataCollatorForSeq2Seq,  DataCollatorForSeq2Seq, AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelWithLMHead
 from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer, EarlyStoppingCallback
-import evaluate
+import evaluatl
 import numpy as np
 import argparse
 from tqdm import tqdm 
@@ -69,7 +69,7 @@ for row_id, row in tqdm(df_test.iterrows(), total=df_test.article.count(), desc=
         actual_output = raw_output.split(separator)[-1]
     prediction.append(actual_output)
     reference.append(row.summary)
-    
+
 results = compute_metrics(predictions=prediction, references=reference)
 print("Scores: ", results)
 
