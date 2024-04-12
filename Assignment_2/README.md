@@ -55,4 +55,6 @@ The PDF report is also available as **Report.pdf**.
 ## By:
 **Fernando Vallecillos Ruiz** and **Sushant Gautam**
 
+The PDF report is also available as Report.pdf.
+
 [Overleaf](https://www.overleaf.com/read/dcspmfcnztbp#3a9cdd)
