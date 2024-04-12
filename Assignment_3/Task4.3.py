@@ -58,7 +58,7 @@ for row_id, row in tqdm(df[::-1].iterrows(), total=df.article.count(), desc="Gen
             outputs = [(row_buck[i], decoded_outputs[i]) for i in range(len(decoded_outputs))]
         else: #mistral
             model_inputs = tokenizer(batch_prompts, return_tensors="pt", padding=True, truncation=True, max_length=512).to("cuda")
-            generated_ids = model.generate(**model_inputs, max_new_tokens=1000, do_sample=True, pad_token_id=tokenizer.eos_token_id)
+            generated_ids = model.generate(**model_inputs, max_new_tokens=1000, do_sample=True, do_sample=True, top_k=50, top_p=0.95, temperature=0.9, pad_token_id=tokenizer.eos_token_id)
             decoded_outputs = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
             row_buck= [num for num in batch_row_ids for _ in range(gen_len)]
             outputs = [(row_buck[i], decoded_outputs[i].split("[/INST]")[-1].split("```")[-1]) for i in range(len(decoded_outputs))]
