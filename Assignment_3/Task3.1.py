@@ -58,6 +58,7 @@ if args.checkpoint == "google-t5/t5-base":
     model_path = "google-t5/t5-base"
     checkpoint = args.checkpoint
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+    model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint).to("cuda")
     i_max_length, o_max_length = 512, 256
 else:
     checkpoint= args.checkpoint
