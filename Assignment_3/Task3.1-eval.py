@@ -13,7 +13,7 @@ import os
 from transformers import AutoTokenizer
 from transformers import DataCollatorForSeq2Seq,  DataCollatorForSeq2Seq, AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelWithLMHead
 from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer, EarlyStoppingCallback
-import evaluatl
+import evaluate
 import numpy as np
 import argparse
 from tqdm import tqdm 
