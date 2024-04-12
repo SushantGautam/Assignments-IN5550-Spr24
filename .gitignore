@@ -2,3 +2,4 @@
 .jupyter**
 .ipy**
 __pycache__/
+.vscode/
