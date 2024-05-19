@@ -1,4 +1,2 @@
 **.csv filter=lfs diff=lfs merge=lfs -text
 Assignment_3/data/train.csv filter=lfs diff=lfs merge=lfs -text
-Assignment_3/data_tmp/5.3synthtic_scored.csv filter=lfs diff=lfs merge=lfs -text
-**/*.csv filter=lfs diff=lfs merge=lfs -text
